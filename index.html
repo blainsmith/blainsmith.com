@@ -1,1 +1,32 @@
-\m/
+---
+layout: home
+title: Home
+---
+<section>
+  <header>
+    <span class="label">I am known as a</span>
+    <h1><a href="/about">Web Craftsman<br />and Rebel Geek</a></h1>
+  </header>
+</section>
+
+<section>
+  <article>
+    <header>
+      <span class="date">{{ site.posts.first.date | date: '%B %d, %Y' }}</span>
+      <h1><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h1>
+    </header>
+  </article>
+</section>
+
+<section id="social">
+  <header>
+    <span class="label">Find me on</span>
+    <h1>
+      <a href="http://twitter.com/{{ site.social_name }}" id="twitter" target="_blank">Twitter</a>, 
+      <a href="http://github.com/{{ site.social_name }}" id="github" target="_blank">GitHub</a>,<br />
+      <a href="http://instagram.com/{{ site.social_name }}" id="instagram" target="_blank">Instagram</a>,
+      <a href="http://pinterest.com/{{ site.social_name }}" id="pinterest" target="_blank">Pinterest</a>,<br /> 
+      and <a href="http://dribbble.com/{{ site.social_name }}" id="dribbble" target="_blank">Dribbble</a>
+    </h1>
+  </header>
+</section>

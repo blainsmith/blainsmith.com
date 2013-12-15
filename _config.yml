@@ -1,0 +1,12 @@
+title: Blain Smith
+social_name: blainsmith
+
+future: true
+relative_permalinks: true
+
+permalink: /articles/:title
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
