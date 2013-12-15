@@ -1,41 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
     <title>{{ site.title }}{{ if page.title.tab }} - {{ page.title.tab }}{{ endif }}</title>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    
-    <script type="text/javascript">
 
-      // var _gaq = _gaq || [];
-      // _gaq.push(['_setAccount', 'UA-3193856-5']);
-      // _gaq.push(['_trackPageview']);
-    
-      // (function() {
-      //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      // })();
-    
-    </script>
+    {% include head.html %}
   </head>
   <body>
     <div id="container">
-      <header id="header" class="clearfix">
-        <div id="title">
-          <h1><a href="/">Blain Smith</a></h1>
-        </div>
-        
-        <nav id="menu">
-          <a href="/about">About</a>
-          <a href="/articles">Articles</a>
-          <a href="/talks">Talks</a>
-          <a href="/contact">Contact</a>
-        </nav>
-      </header>
+      {% include header.html %}
       
       <div id="content">
         <article>
@@ -49,9 +21,7 @@
         </article>
       </div>
       
-      <footer id="footer">
-        &copy; 2012. Blain Smith.</a>
-      </footer>
+      {% include footer.html %}
     </div>
   </body>
 </html>
