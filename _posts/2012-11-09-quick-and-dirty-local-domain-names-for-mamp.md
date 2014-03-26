@@ -26,7 +26,7 @@ At the end of that file add the sites you wish to respond. You will need to ente
 
 Make note of the name **my-site.dev** because will be using it later on. I have included a few more examples of what can be put into the hosts file.
 
-{{ gist id="4046733" file="hosts" }}
+<script src="https://gist.github.com/blainsmith/4046733.js?file=hosts"></script>
 
 Step 2 - Create the Website Folder
 ------------------
@@ -50,7 +50,7 @@ There is specific file for Apache that handles virtual hosts in:
 
 Open that file and change it to the version I included for you here:
 
-{{ gist id="4046733" file="httpd-vhosts.conf" }}
+<script src="https://gist.github.com/blainsmith/4046733.js?file=httpd-vhosts.conf"></script>
 
 Make sure the **VirtualDocumentRoot** is the same path as the **Document Root** path you found in Step 2, but that it ends with **/%0**.
 
@@ -65,7 +65,7 @@ Also, while we have this file open we are going to uncomment a line to make sure
 
 You will need to add **Listen 80** above the **Listen 8888** line in your own file and uncomment the line below **# Virtual hosts**. Here is a snippet of the httpd.conf file and how yours should look once you make those 2 changes.
 
-{{ gist id="4046733" file="httpd.conf" }}
+<script src="https://gist.github.com/blainsmith/4046733.js?file=httpd.conf"></script>
 
 Once you have all of these changed and saved just stop and start MAMP and you should be able to visit [http://my-site.dev](http://my-site.dev) in your browser. Now to add more sites just repeat Steps 1 & 2. You can even set up existing sites this way as well.
 
