@@ -10,6 +10,12 @@ I have been building a lot of Javascript apps lately. I started to prototype one
 
 This was the perfect solution for me. `SimpleHTTPServer` is a Python library and when you send that to Python with the `-m` flag it tells Python to run the library as a script. Running this within the root of your static file project just fires up a web server at <a href="http://localhost:8000">http://localhost:8000</a>.
 
+There is also a PHP version that will actually read a `.htaccess` file so you don't have to use Apache.
+
+```
+~/Projects/static-app > php -S localhost:8000
+```
+
 This is perfect for:
 
 - Wireframing and protoyping
