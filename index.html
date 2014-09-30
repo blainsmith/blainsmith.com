@@ -1,32 +1,77 @@
 ---
-layout: home
-title: Home
+layout: default
 ---
-<section>
-  <header>
-    <span class="label">I am known as a</span>
-    <h1><a href="/about">Web Craftsman<br />and Rebel Geek</a></h1>
-  </header>
-</section>
 
-<section>
-  <article>
-    <header>
-      <span class="date">{{ site.posts.first.date | date: '%B %d, %Y' }}</span>
-      <h1><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h1>
-    </header>
-  </article>
-</section>
+<div class="teaserimage">
+    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
+        Teaser Image
+    </div>
+</div>
 
-<section id="social">
-  <header>
-    <span class="label">Find me on</span>
-    <h1>
-      <a href="http://twitter.com/{{ site.social_name }}" id="twitter" target="_blank">Twitter</a>, 
-      <a href="http://github.com/{{ site.social_name }}" id="github" target="_blank">GitHub</a>,<br />
-      <a href="http://instagram.com/{{ site.social_name }}" id="instagram" target="_blank">Instagram</a>,
-      <a href="http://pinterest.com/{{ site.social_name }}" id="pinterest" target="_blank">Pinterest</a>,<br /> 
-      and <a href="http://dribbble.com/{{ site.social_name }}" id="dribbble" target="_blank">Dribbble</a>
-    </h1>
-  </header>
-</section>
+<header class="blog-header">
+    {% if site.logo %}
+      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+    {% endif %}
+    <h1 class="blog-title">{{ site.title }}</h1>
+    <h2 class="blog-description">{{ site.description }}</h2>
+    <div class="custom-links">
+      {% for social in site.social %}
+        <a class="icon-{{ social.icon }}" href="{{ social.url }}">
+          <i class="fa fa-{{ social.icon }}"></i>
+        </a>
+        &nbsp;&nbsp;·&nbsp;&nbsp;
+      {% endfor %}
+      <a href="/about/">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="/articles/">Articles</a>
+    </div>
+</header>
+
+<script>
+    (function ($) {
+        "use strict";
+
+        $(document).ready(function(){
+
+            var $window = $(window),
+                $image = $('.teaserimage-image');
+            $window.on('scroll', function() {
+                var top = $window.scrollTop();
+
+                if (top < 0 || top > 1500) { return; }
+                $image
+                    .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+                    .css('opacity', 1-Math.max(top/700, 0));
+            });
+            $window.trigger('scroll');
+
+        });
+
+    }(jQuery));
+</script>
+
+<main class="content" role="main">
+
+    <h5 class="index-headline normal"><span>Recent Post</span></h5>
+
+    <div class="cf frame">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="{{ site.posts.first.url }}" itemprop="url">{{ site.posts.first.title }}</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>{{ site.posts.first.content | strip_html | truncatewords: 50 }}</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="{{ site.posts.first.date | date_to_long_string }}">{{ site.posts.first.date | date_to_long_string }}</time>
+<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+          </div>
+        <div>
+      </article>
+    </div>
+
+
+    <!-- {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}} -->
+
+</main>

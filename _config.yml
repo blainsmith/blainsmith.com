@@ -1,12 +1,53 @@
-title: Blain Smith
-social_name: blainsmith
+# Build settings
+markdown: redcarpet
+highlighter: pygments
 
-future: true
+# Site settings
+title: "Blain Smith"
+description: > # this means to ignore newlines until "email:"
+   Saying whatever I want
+
+email: rebelgeek@blainsmith.com
+#blog logo
+logo: "/assets/images/heisenbeard.png"
+# blog cover
+cover: "/assets/images/gym.png"
+
+name: 'Blain Smith'
+author: 'Blain Smith'
+author_image: "/assets/images/heisenbeard.png"
+
+url: "http://blainsmith.com" # the base hostname & protocol for your site
+baseurl: ""
 relative_permalinks: true
-
 permalink: /articles/:title
 
-markdown: kramdown
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/blainsmith
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
 
-kramdown:
-  input: GFM
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: //www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/blainsmith
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
