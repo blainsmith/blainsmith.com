@@ -1,0 +1,22 @@
+---
+layout: page
+title: Talks
+---
+<p>My public speaking appearances.</p>
+
+{% for talk in site.data.talks %}
+<article class="post" role="talk">
+  <div class="article-item">
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name"><a href="{{ talk.url }}" itemprop="url">{{ talk.title }}</a></h2>
+      <h4>{{ talk.event }}</h4>
+    </header>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ talk.synopsis }}</p>
+    </section>
+    <div class="post-meta">
+      <time datetime="{{ talk.date | date_to_long_string }}">{{ talk.date | date_to_long_string }}</time>
+    </div>
+  <div>
+</article>
+{% endfor %}
