@@ -2,7 +2,7 @@
 layout: post
 title: Why? Because I Believe!
 ---
-My wife and I have been on a TED talk kick lately on Netflix and this morning I came across and oldie, but a goodie. **Simon Sinek: How great leaders inspire action**. This got me thinking about [MadGlory](http://twitter.com/madgloryint) and why I wanted to work with them so badly. Their beliefs spoke to me and since I strongly felt the same way I needed to do whatever I could do to join the family.
+My wife and I have been on a TED talk kick lately on Netflix and this morning I came across and oldie, but a goodie. **Simon Sinek: How great leaders inspire action**. This got me thinking about [MadGlory](http://twitter.com/madglory) and why I wanted to work with them so badly. Their beliefs spoke to me and since I strongly felt the same way I needed to do whatever I could do to join the family.
 
 Every day, since starting in October 2012, my family members do or say something that supports my belief in our company. I say "our" because that's what it is. Its not someone else's, its everyone's. 
 
