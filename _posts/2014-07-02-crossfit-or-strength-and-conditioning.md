@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CrossFit or Strength and Conditioning?
+image: /assets/images/gym.png
 ---
 Ever since starting CrossFit 2+ years ago, I have completely engulfed myself in learning as much as I can about fitness, nutrition, gymnastics, olympic weightlifting, powerlifting, and everything inbetween.
 

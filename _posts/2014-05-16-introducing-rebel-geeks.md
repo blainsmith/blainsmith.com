@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducting Rebel Geeks
+image: /assets/article_images/bike-in-garage.jpg
 ---
 It is no secret that I enjoy a wide array of hobbies outside of work. CrossFit, weightlifting, fast cars, and loud bikes, just to name a few. As I became more invovled in the local web community I found a lot of my peers loved to ride as well. What a perfect opportunity to share even more interests with people I know other than just work-related stuff. 
 
