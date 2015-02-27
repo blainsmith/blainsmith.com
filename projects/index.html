@@ -1,0 +1,25 @@
+---
+layout: page
+title: Side Projects
+image: /assets/images/node-code.jpg
+---
+{% for project in site.data.projects %}
+<article class="post" role="project">
+  <div class="article-item">
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name"><a href="{{ project.url }}" itemprop="url">{{ project.title }}</a></h2>
+      {% if project.url %}
+        <p><a href="{{ project.url }}" itemprop="url">{{ project.url }}</a></p>
+      {% endif %}
+    </header>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ project.synopsis }}</p>
+    </section>
+    {% if project.repo %}
+      <div class="post-meta">
+        <p>Repo: <a href="{{ project.repo }}">{{ project.repo }}</a></p>
+      </div>
+    {% endif %}
+  <div>
+</article>
+{% endfor %}

@@ -10,7 +10,7 @@ layout: default
 
 <header class="blog-header">
     {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+      <a class="blog-logo" href="/" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
     {% endif %}
     <h1 class="blog-title">{{ site.title }}</h1>
     <h2 class="blog-description">{{ site.description }}</h2>
@@ -23,7 +23,8 @@ layout: default
       {% endfor %}
       <a href="/about/">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
       <a href="/articles/">Articles</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-      <a href="/talks/">Talks</a>
+      <a href="/talks/">Talks</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="/projects/">Projects</a>
     </div>
 </header>
 
