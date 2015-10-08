@@ -30,4 +30,15 @@
   <script type="text/javascript" src="{{ "/assets/js/jquery.fitvids.js" | prepend: site.baseurl  }}"></script>
   <script type="text/javascript" src="{{ "/assets/js/index.js" | prepend: site.baseurl  }}"></script>
   <script type="text/javascript" src="{{ "/assets/js/readingTime.min.js" | prepend: site.baseurl  }}"></script>
+
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ content | strip_html | truncatewords: 50 }}}}" />
+    {% if page.image %}
+      <meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}" />
+    {% endif %}
+  {% endif %}
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 </head>
