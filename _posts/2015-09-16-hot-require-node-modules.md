@@ -3,7 +3,7 @@ layout: post
 title: 'Hot "require" Node Modules'
 image: /assets/article_images/require-node-modules.jpg
 ---
-Under normal circumstances when writing node apps all dependancies and code are packaged in the repo and deployed. Modifying any part of the app requires you to deploy again and rebooting the server. However, I needed a way to [hot require](https://en.wikipedia.org/wiki/Hot_swapping) javascript code and execute it while the app was running so there would not be any downtime. I was able to achieve this using node core's [modules API](https://nodejs.org/api/modules.html) to fetch a string of javascript from a database and execute it within the context of my node app.
+Under normal circumstances when writing node apps all dependencies and code are packaged in the repo and deployed. Modifying any part of the app requires you to deploy again and reboot the server. However, I needed a way to [hot require](https://en.wikipedia.org/wiki/Hot_swapping) javascript code and execute it while the app was running so there would not be any downtime. I was able to achieve this using node core's [modules API](https://nodejs.org/api/modules.html) to fetch a string of javascript from a database and execute it within the context of my node app.
 
 Lets say we have a collection in our database with an entry that looks like the following:
 
