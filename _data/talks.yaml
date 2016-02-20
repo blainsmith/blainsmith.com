@@ -1,24 +1,24 @@
 - title: 'Build it Live: NASA Video App'
   event: Sharatoga TechTalks
   date: February 17, 2016
-  url: /articles/build-it-live-nasa-video-app/
+  url: /articles/build-it-live-nasa-video-app
   synopsis: Stitching together microservices to provide a nice API platform for media app development.
   slides: http://build-it-live-nasa-video-app.surge.sh
 - title: PRd - A Side Project
   event: Sharatoga TechTalks
   date: March 17, 2015
-  url: /articles/prd-a-side-project/
+  url: /articles/prd-a-side-project
   synopsis: Showing my other interests with unopinionated and simple app for training.
   slides: http://prd-a-side-project.surge.sh
 - title: git a Free, Highly Scaled Web Host
   event: Sharatoga TechTalks
   date: November 19, 2014
-  url: /articles/sharatoga-techtalks-git-a-free-highly-scaled-web-host/
+  url: /articles/sharatoga-techtalks-git-a-free-highly-scaled-web-host
   synopsis: Learn how to leverage git and GitHub.com as a highly scalable web host for free.
   slides: http://blainsmith.com/sharatoga-techtalks-nov-2014
 - title: The Master of My Fate
   event: TEDxAlbany
   date: December 13, 2013
-  url: /articles/tedxalbany-the-master-of-my-fate/
+  url: /articles/tedxalbany-the-master-of-my-fate
   synopsis: My first public talk ever. I cover my history and how and why I ended up where I am in life.
   slides:
