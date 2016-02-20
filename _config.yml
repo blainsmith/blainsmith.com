@@ -18,8 +18,6 @@ author: 'Blain Smith'
 author_image: "/assets/images/heisenbeard.png"
 
 url: "http://blainsmith.com" # the base hostname & protocol for your site
-baseurl: ""
-relative_permalinks: true
 permalink: /articles/:title
 
 # social icons and sharing options
