@@ -11,6 +11,9 @@ title: Talks
     </header>
     <section class="post-excerpt" itemprop="description">
       <p>{{ talk.synopsis }}</p>
+      {% if talk.slides %}
+        <p>Slides: <a href="{{ talk.slides }}">{{ talk.slides }}</a></p>
+      {% endif %}
     </section>
     <div class="post-meta">
       <time datetime="{{ talk.date | date_to_long_string }}">{{ talk.date | date_to_long_string }}</time>
