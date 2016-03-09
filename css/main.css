@@ -165,7 +165,7 @@ body {
   height: 48px;
   background-color: #fff;
   overflow: hidden;
-  z-index: 99; 
+  z-index: 99;
   border-radius: 50px; }
   .logo-readium .logo {
     display: block;
@@ -443,7 +443,7 @@ body {
   font-weight: 700;
   font-style: normal;
   letter-spacing: -0.04em;
-  font-size: 50px;
+  font-size: 44px;
   line-height: 1.1;
   color: #333332;
   margin-bottom: 16px; }
@@ -721,7 +721,7 @@ body {
 .post-tag-articleimage {
   display: none; }
 
-pre,
+/*pre,
 code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
@@ -737,4 +737,4 @@ pre {
   pre > code {
     border: 0;
     padding-right: 0;
-    padding-left: 0; }
+    padding-left: 0; }*/
