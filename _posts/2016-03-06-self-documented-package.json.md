@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Self-documented package.json'
+title: 'Self-Documented package.json'
 ---
 I read a google article the other day about a [self-documented Makefile](http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html). The TL;DR is you can add comments to each of the commands in the `Makefile`. Then by just running `make` from the command line it will print both the command and the associated comment to explain the entire `Makefile` at a quick glance. Not only is this very helpful, but it also rids your `README` of this shit you constantly having to keep updated:
 
