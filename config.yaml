@@ -1,0 +1,18 @@
+baseURL: http://blainsmith.com
+disablePathToLower: true
+languageCode: en-us
+theme: "black-and-light"
+author: "Blain Smith"
+canonifyurls: true
+
+params:
+  sitename: Blain Smith
+
+menu:
+  main:
+    -
+      name: "GitHub"
+      url: "https://github.com/blainsmith"
+    -
+      name: "Twitter"
+      url: "https://twitter.com/blainsmith"
