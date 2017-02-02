@@ -56,7 +56,7 @@ func main() {
 }
 ```
 
-While this proved effective and worked perfectly fine it isn't very idiomatic in Go. It also felt very dirty to me so I looked around for a better way to handle this. I immediately went into the Go standard library because it seems to always have what I need. In this cases I needed something like a slice, but with some methods to make working with the underlying elements nicer. As it turns out Go has a `container/list` [^1] package that does exactly what I wanted to have this registry pattern I could work with.
+While this proved effective and worked perfectly fine it isn't very idiomatic in Go. It also felt very dirty to me so I looked around for a better way to handle this. I immediately went into the Go standard library because it seems to always have what I need. In this cases I needed something like a slice, but with some methods to make working with the underlying elements nicer. As it turns out Go has a `container/list` package that does exactly what I wanted to have this registry pattern I could work with.
 
 Refactoring the interface file I now have:
 
@@ -82,7 +82,7 @@ type EventWriter interface {
 }
 ```
 
-And now for using the `Registry` list in my main program I have just a standard `list.List` provided by the standard library, which is an implementation of a doubly linked list [^2] data structure. I also get all the documentation around this as well so that the next developer that looks at this can understand this a lot quicker.
+And now for using the `Registry` list in my main program I have just a standard `list.List` provided by the standard library, which is an implementation of a doubly linked list data structure. I also get all the documentation around this as well so that the next developer that looks at this can understand this a lot quicker.
 
 One thing to notice when I call `WriteEvent` within the loop is that I need to cast the `writer.Value`, into an actual `Writer`. That is because `list.List` works with `interface{}` types as you can see from the documentation.
 
