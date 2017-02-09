@@ -1,2 +1,1 @@
-blainsmith.github.io
-====================
+http://blainsmith.com
