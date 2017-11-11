@@ -19,3 +19,6 @@ menu:
     -
       name: "Twitter"
       url: "https://twitter.com/blainsmith"
+    -
+      name: "Mastodon"
+      url: "https://mastodon.social/@blainsmith"
