@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+<section id="content">
+  {{ range .Data.Pages }}
+    <article>
+      <header>
+        <h2 id="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div id="date">
+          Posted: <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
+        </div>
+      </header>
+      {{ .Summary }}
+    </article>
+  {{ end }}
+</section>
+
+{{ partial "footer.html" . }}
+
