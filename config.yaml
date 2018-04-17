@@ -1,7 +1,7 @@
 baseURL: http://blainsmith.com
 disablePathToLower: true
 languageCode: en-us
-theme: "black-and-light"
+theme: "text-only"
 author: "Blain Smith"
 canonifyurls: true
 
