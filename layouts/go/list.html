@@ -1,13 +1,14 @@
 {{ partial "header.html" . }}
 
 <section id="content">
-  {{ range .Data.Pages }}
     <article>
       <header>
-        <h2 id="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2 id="title">Go Packages</h2>
       </header>
+      {{ range .Data.Pages }}
+      <p>go get -u <a href="https://godoc.org/{{substr .Site.BaseURL 8}}{{substr .RelPermalink 1 -1}}">{{substr .Site.BaseURL 8}}{{substr .RelPermalink 1 -1}}</a></p>
+      {{ end }}
     </article>
-  {{ end }}
 </section>
 
 {{ partial "footer.html" . }}
