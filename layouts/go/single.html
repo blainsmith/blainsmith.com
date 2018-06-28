@@ -2,8 +2,8 @@
 <html lang="{{ .Site.LanguageCode }}">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="go-import" content="{{ .Site.BaseURL }}{{substr .RelPermalink 0 -1}} {{.Params.vcs}} {{.Params.source}}">
-        <meta name="go-source" content="{{ .Site.BaseURL }}{{substr .RelPermalink 0 -1}} {{.Params.source}} {{.Params.source}}/tree/master{/dir} {{.Params.source}}/blob/master{/dir}/{file}#L{line}">
-        <meta http-equiv="refresh" content="0; url=https://godoc.org/{{substr .Site.BaseURL 7}}{{substr .RelPermalink 0 -1}}">
+        <meta name="go-import" content="{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}} {{.Params.vcs}} {{.Params.source}}">
+        <meta name="go-source" content="{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}} {{.Params.source}} {{.Params.source}}/tree/master{/dir} {{.Params.source}}/blob/master{/dir}/{file}#L{line}">
+        <meta http-equiv="refresh" content="0; url=https://godoc.org/{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}}">
     </head>
 </html>
