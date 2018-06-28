@@ -5,4 +5,7 @@
         <meta name="go-import" content="{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}} {{.Params.vcs}} {{.Params.source}}">
         <meta name="go-source" content="{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}} {{.Params.source}} {{.Params.source}}/tree/master{/dir} {{.Params.source}}/blob/master{/dir}/{file}#L{line}">
     </head>
+    <body>
+        Documentation: <a href="https://godoc.org/{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}}">https://godoc.org/{{substr .Site.BaseURL 8}}{{substr .RelPermalink 0 -1}}</a>
+    </body>
 </html>
