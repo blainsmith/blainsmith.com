@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <section id="content">
-  {{ range .Data.Pages }}
+  {{ range where .Pages "Section" "articles" }}
     <article>
       <header>
         <h2 id="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
