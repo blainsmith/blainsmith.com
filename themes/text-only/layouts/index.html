@@ -5,11 +5,11 @@
     <article>
       <header>
         <h2 id="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div id="date">
-          Posted: <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
-        </div>
+        <p id="date">
+          <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
+        </p>
       </header>
-      {{ .Summary }}
+      <p>{{ .Summary }}</p>
     </article>
   {{ end }}
 </section>
