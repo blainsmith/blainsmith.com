@@ -22,3 +22,6 @@ menu:
     -
       name: "Mastodon"
       url: "https://mastodon.social/@blainsmith"
+    -
+      name: "LinkedIn"
+      url: "https://www.linkedin.com/in/blainsmith"
