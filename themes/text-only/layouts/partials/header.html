@@ -11,12 +11,7 @@
     {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 
     <title>
-      {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-      {{ if eq $url "/" }}
-        {{ .Site.Title }}
-      {{ else }}
-        {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
-      {{ end }}
+      {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
     </title>
     <link rel="canonical" href="{{ .Permalink }}">
 
@@ -30,11 +25,11 @@
   </head>
 
   <body>
-    <section id="nav">
-      <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
+    <header id="nav">
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
       <div>
         {{ range .Site.Menus.main }}
           [<a href="{{ .URL }}">{{ .Name }}</a>]
         {{ end }}
       </div>
-    </section>
+    </header>

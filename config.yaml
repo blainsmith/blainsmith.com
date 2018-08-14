@@ -1,12 +1,10 @@
+title: "Blain Smith"
 baseURL: https://blainsmith.com
 disablePathToLower: true
 languageCode: en-us
 theme: "text-only"
 author: "Blain Smith"
 canonifyurls: true
-
-params:
-  sitename: Blain Smith
 
 menu:
   main:
