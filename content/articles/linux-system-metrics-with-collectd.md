@@ -212,8 +212,23 @@ Open a web browser and go to the following address: http://localhost:8080 and yo
 
 ![](https://s3.amazonaws.com/dev.beautifulatlas.com/uploads/56a5df1a-939c-4915-8a9b-d1e0b6543224/ee2772f3-2467-4fab-9e97-7c90133ec31f/Screenshot%20from%202018-08-13%2014-11-21.png)
 
-You can see I have multiple hosts so it will list every host (device) it has data for. Click on the host you want to view charts for and you should see something like this.
+You can see I have multiple hosts so it will list every host (device) it has data for. Click on the host you want to view charts for and you should see something like this. The multiple hosts are just multiple folders listed on disk.
+
+```
+/var/lib/collectd/rrd 
+> ls -lah
+total 20K
+drwxr-xr-x  5 root root 4.0K Aug 13 14:10 ./
+drwxr-xr-x  4 root root 4.0K Aug 13 11:13 ../
+drwxr-xr-x 44 root root 4.0K Aug 13 14:10 78dsJIOLHJK78bnjk.localdomain/
+drwxr-xr-x 44 root root 4.0K Aug 13 14:10 dasKH90321KJsaa8.localdomain/
+drwxr-xr-x 44 root root 4.0K Aug 13 11:14 pop-os.localdomain/
+```
+
+You can continue to drop host folders in here and the UI will pick them up and parse them.
 
 ![](https://s3.amazonaws.com/dev.beautifulatlas.com/uploads/56a5df1a-939c-4915-8a9b-d1e0b6543224/528c0d0d-3695-48bb-819b-13ad8cd758f8/Screenshot%20from%202018-08-13%2014-12-32.png)
 
-Oooooo charts! Now you can click on the left menu to drill down. Enjoy!
+Oooooo charts! Now you can click on the left menu to drill down. You will also notice that the URL has a predictable pattern so you can even add these links to other systems you have to link directly to these charts. Adding a link in the form of `https://cgp.example.com/host.php?h=<HOST_FOLDER>`.
+
+Enjoy and reach out to me if you have any questions.
