@@ -1,6 +1,7 @@
 ---
 date: 2017-02-06T00:00:00Z
 title: Fuck Your Hustle
+tags: career, working, productivity, softwareengineering
 ---
 
 This word is used throughout the startup and tech worlds and it annoys the shit out of me. Not only does it seem to stroke the egos using it, but it is also being used in completely the wrong context. Both of these definitions indicate no decisions being made on the person being hustled. How does this have anything to do with successfully launching a startup, product, or completing any task that is worth a damn?
