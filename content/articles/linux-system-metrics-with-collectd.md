@@ -34,17 +34,16 @@ There is a [full list of plugins](https://collectd.org/wiki/index.php/Table_of_P
 
 The default path collectd keeps its configuration file is in `/etc/collectd/collectd.conf`. We need to edit this file to set up the plugins we want to use.
 
-```
+```shell
 $ cd /etc/collectd
 
 # Create a backup of the default configuration
 $ cp collectd.conf collectd.default.conf
-
 ```
 
 Open `/etc/collectd/collectd.conf` in your preferred editor and overwrite it with the following:
 
-```
+```shell
 # This tells collectd to lookup the hostname for storing data
 # in a folder with that name
 FQDNLookup true
@@ -81,7 +80,6 @@ LoadPlugin thermal
 <Plugin rrdtool>
     DataDir "/var/lib/collectd/rrd"
 </Plugin>
-
 ```
 
 Save the file and now we have a minimal configuration.
@@ -91,10 +89,9 @@ Save the file and now we have a minimal configuration.
 
 If you installed collectd via a package manager then chances are there will be a SystemD service available to use.
 
-```
+```shell
 # Start the collecd system service
 $ sudo systemctl start collectd
-
 ```
 
 collectd should now be running and collecting metrics and writing data to the folders specified in the configuration file.
@@ -104,7 +101,7 @@ collectd should now be running and collecting metrics and writing data to the fo
 
 We set up the CSV plugin to verify we are collecting information since the RDD plugin can't be read by humans. CSV is easier to read via the command line.
 
-```
+```shell
 # View some metrics
 $ cd /var/lib/collectd
 
@@ -161,12 +158,11 @@ d--xrwxrwx  2 root root 4.0K Aug 13 11:13 thermal-thermal_zone0/
 d--xrwxrwx  2 root root 4.0K Aug 13 11:13 thermal-thermal_zone1/
 d--xrwxrwx  2 root root 4.0K Aug 13 11:13 thermal-thermal_zone2/
 d--xrwxrwx  2 root root 4.0K Aug 13 11:13 thermal-thermal_zone3/
-
 ```
 
 You can see how the metrics are actually being stored on disk. The RDD plugin has a similar folder structure under `/var/lib/collectd/pop-os.localdomain/rdd` which you can browse as well.
 
-```
+```shell
 # View system load
 $ cd load/
 
@@ -189,7 +185,6 @@ epoch,shortterm,midterm,longterm
 1534182203.079,0.660000,0.600000,0.470000
 1534182213.078,0.640000,0.590000,0.470000
 1534182223.078,0.540000,0.570000,0.460000
-
 ```
 
 Now we see the load information collectd has been collecting on the interval we have specified. For this example I have 10ms specified for the interval to show more data. The corresponding RDD binary file is at `/var/lib/collectd/rdd/pop-os.localdomain/load/load.rdd` which we will use for the UI in the next section.
@@ -201,11 +196,9 @@ The CSV files are all well and good, but we can actually generate charts from th
 
 Now that you have the metrics on your local machine you can simply run the docker container to run a local web app that will allow you to browse the results.
 
-```
+```shell
 # Run the container and mount a volume of the RDD data
-$ docker run -v /var/lib/collectd/rrd:/var/lib/collectd/rrd -p 8080:80
-konjak/cgp
-
+$ docker run -v /var/lib/collectd/rrd:/var/lib/collectd/rrd -p 8080:80 konjak/cgp
 ```
 
 Open a web browser and go to the following address: http://localhost:8080 and you should see something like this.
@@ -214,9 +207,9 @@ Open a web browser and go to the following address: http://localhost:8080 and yo
 
 You can see I have multiple hosts so it will list every host (device) it has data for. Click on the host you want to view charts for and you should see something like this. The multiple hosts are just multiple folders listed on disk.
 
-```
-/var/lib/collectd/rrd 
-> ls -lah
+```shell
+$ cd /var/lib/collectd/rrd 
+$ ls -lah
 total 20K
 drwxr-xr-x  5 root root 4.0K Aug 13 14:10 ./
 drwxr-xr-x  4 root root 4.0K Aug 13 11:13 ../
