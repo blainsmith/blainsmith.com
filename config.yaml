@@ -18,5 +18,5 @@ menu:
       name: "Twitter"
       url: "https://twitter.com/blainsmith"
     -
-      name: "LinkedIn"
-      url: "https://www.linkedin.com/in/blainsmith"
+      name: "Email"
+      url: "mailto:rebelgeek@blainsmith.com"
