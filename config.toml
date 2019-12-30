@@ -1,0 +1,28 @@
+title = "Blain Smith"
+baseURL = "https://blainsmith.com"
+disablePathToLower = true
+languageCode = "en-us"
+theme = "text-only"
+canonifyurls = true
+
+[params]
+  author = "Blain Smith"
+  description = "Thoughts on software engineering and programming...mostly."
+
+[menu]
+
+  [[menu.main]]
+  name = "Keybase"
+  url = "https://keybase.io/blainsmith"
+
+  [[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/blainsmith"
+
+  [[menu.main]]
+  name = "Twitter"
+  url = "https://twitter.com/blainsmith"
+
+  [[menu.main]]
+  name = "Email"
+  url = "mailto:rebelgeek@blainsmith.com"
