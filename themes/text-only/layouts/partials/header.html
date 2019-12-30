@@ -8,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     <base href="{{ .Site.BaseURL }}">
-    {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+    <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Title}}{{end}}">
+    <meta name="author" content="{{ .Site.Params.author }}">
 
-    <title>
-      {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
-    </title>
+    <title>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
